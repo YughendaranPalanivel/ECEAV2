@@ -1,0 +1,41 @@
+###Signup
+POST  http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "name":"Yughendaran",
+    "email":"yughendaran@gmail.com",
+    "password":"subaa123#"
+}
+
+###Login
+
+POST  http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email":"yughendaran@gmail.com",
+    "password":"subaa123#"
+}
+
+###Getting list of programs using Access Token
+GET http://localhost:3000/program
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiWXVnaGVuZGFyYW4iLCJlbWFpbCI6Inl1Z2hlbmRhcmFuQGdtYWlsLmNvbSIsImlhdCI6MTY0MjE4NjQ4NSwiZXhwIjoxNjQyMTg2NTAwfQ.NjD0bC40xzcXXUSC01ebuWE8jRRTEYTb_PT2TrWBn2c
+
+###Generating Access Token using Refresh Token
+POST http://localhost:3000/auth/token
+Content-Type: application/json
+
+{
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiWXVnaGVuZGFyYW4iLCJlbWFpbCI6Inl1Z2hlbmRhcmFuQGdtYWlsLmNvbSIsImlhdCI6MTY0MjE4OTEyM30._492TFsjWvJG1ShzkliKRvTyKpr2u1XLrcK6IEPMPik"
+}
+
+
+###Logout
+
+DELETE http://localhost:3000/auth/logout
+Content-Type: application/json
+
+{
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiWXVnaGVuZGFyYW4iLCJlbWFpbCI6Inl1Z2hlbmRhcmFuQGdtYWlsLmNvbSIsImlhdCI6MTY0MjE4OTEyM30._492TFsjWvJG1ShzkliKRvTyKpr2u1XLrcK6IEPMPik"
+}
